@@ -1,23 +1,11 @@
 # 📂 Estruturas de Dados - Manipulação de Arquivos CSV (Disney+)
 
-Este repositório contém implementações em **Java** e **C** que trabalham com o dataset `disneyplus.csv`.  
-Os programas fazem a leitura, manipulação e ordenação de registros de filmes e séries, aplicando diferentes estruturas de dados e algoritmos clássicos.
+Este repositório contém implementações em **Java** que trabalha com o dataset `disneyplus.csv`.  
+Os programas fazem a leitura e manipulaçãode registros de filmes e séries, aplicando diferentes estruturas de dados e algoritmos clássicos.
 
 ---
 
 ## 📌 Projetos
-
-### 🔹 Quicksort com Lista Duplamente Encadeada (C)
-**Arquivo:** `quicksort.c`
-
-- Lê o arquivo `disneyplus.csv` e armazena os registros em memória.  
-- Implementa um **QuickSort** que ordena os títulos por **data de adição** (critério principal) e **nome do título** (critério de desempate).  
-- Os resultados são inseridos em uma **lista duplamente encadeada** e exibidos em ordem.  
-- O parser do CSV trata campos entre aspas, valores ausentes e normaliza dados como `NaN`.  
-
-👉 **Conceitos aplicados:** manipulação manual de CSV, listas dinâmicas, ordenação com múltiplos critérios.
-
----
 
 ### 🔹 Pilha Flexível (Java)
 **Arquivo:** `PilhaFlex.java`
@@ -31,33 +19,55 @@ Os programas fazem a leitura, manipulação e ordenação de registros de filmes
 ---
 
 ### 🔹 Árvore Binária de Busca (Java)
-**Arquivo:** `Principal.java`
+**Arquivo:** `arvoreBST.java`
 
 - Implementa uma **árvore binária de busca (ABB)** para armazenar registros de filmes e séries.  
 - A busca é feita pelo campo **título**, exibindo o **caminho percorrido** na árvore até encontrar (ou não) o registro.  
 - Também realiza a leitura manual do `disneyplus.csv`, tratando strings com aspas e vírgulas.  
 
-👉 **Conceitos aplicados:** árvores de busca binária, inserção ordenada, busca com rastreamento do caminho.
+👉 **Conceitos aplicados:** árvores de busca binária, inserção ordenada, busca com rastreamento do caminho (sem balanceamento).
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="50" height="50"/>
+</p>
+
+![CSV](https://img.shields.io/badge/CSV-Data-blue?style=for-the-badge)
+
+![Estruturas de Dados](https://img.shields.io/badge/Estruturas%20de%20Dados-Algoritmos-green?style=for-the-badge)
 
 ---
 
 ## 🚀 Execução
+```bash
+git clone https://github.com/mateusppb/Trabalho-Pratico-03.git
+cd Trabalho-Pratico-03
+```
 
-### Java
+**Pilha Flexível**
+
+<img width="1816" height="511" alt="Captura de Tela (82)" src="https://github.com/user-attachments/assets/3d34c561-c25a-4d18-88cb-cda7199a3a5b" />
+
 ```bash
 # Compilar
-javac Principal.java
 javac PilhaFlex.java
 
 # Executar
-java Principal < disneyplus.csv
 java PilhaFlex < disneyplus.csv
+```
+**Árvore Binária**
 
+<img width="681" height="763" alt="Captura de Tela (81)" src="https://github.com/user-attachments/assets/85e94ba3-105a-407e-904f-9e5b8048df55" />
+
+```bash
 # Compilar
-gcc quicksort.c -o quicksort
+javac arvoreBST.java
 
 # Executar
-./quicksort < disneyplus.csv
+java arvoreBST < disneyplus.csv
 ```
 
 ---
